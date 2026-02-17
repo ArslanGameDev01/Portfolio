@@ -540,6 +540,62 @@ body {
 }
 
 /* ============================================
+   Languages Section
+   ============================================ */
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.language-card {
+    position: relative;
+    background-color: var(--bg-primary);
+    padding: 28px 24px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.language-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.language-name {
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.language-level {
+    position: relative;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ============================================
    Contact Section
    ============================================ */
 
